@@ -1,0 +1,21 @@
+import React, { useState } from 'react';
+import { Button } from '@mui/material';
+
+const MyButton = () => {
+  const [clicked, setClicked] = useState(false);
+
+  const handleClick = () => {
+    setClicked(!clicked);
+  };
+
+  return (
+    <Button 
+      onClick={handleClick} 
+      sx={{ backgroundColor: clicked ? 'green' : 'blue', color: 'white' }}
+    >
+      {clicked ? 'Clicado!' : 'Clique Aqui'}
+    </Button>
+  );
+};
+
+export default MyButton;
